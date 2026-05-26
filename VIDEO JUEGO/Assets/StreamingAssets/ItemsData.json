@@ -1,0 +1,58 @@
+{
+   "items":[
+      {
+         "id":"cristal_1",
+         "tipo":"Cristal",
+         "nombre":"Cristal de la Selva",
+         "escenaAsignada":2,
+         "posX":5.0,
+         "posY":1.0,
+         "posZ":10.0
+      },
+      {
+         "id":"herramienta_1",
+         "tipo":"Herramienta",
+         "nombre":"Pala de Explorador",
+         "escenaAsignada":2,
+         "posX":-5.0,
+         "posY":1.0,
+         "posZ":12.0
+      },
+      {
+         "id":"cristal_2",
+         "tipo":"Cristal",
+         "nombre":"Cristal Brillante",
+         "escenaAsignada":3,
+         "posX":15.0,
+         "posY":-2.0,
+         "posZ":20.0
+      },
+      {
+         "id":"herramienta_2",
+         "tipo":"Herramienta",
+         "nombre":"Aceite de Motor",
+         "escenaAsignada":3,
+         "posX":8.0,
+         "posY":-1.5,
+         "posZ":22.0
+      },
+      {
+         "id":"cristal_3",
+         "tipo":"Cristal",
+         "nombre":"Cristal Volcánico",
+         "escenaAsignada":4,
+         "posX":0.0,
+         "posY":5.0,
+         "posZ":35.0
+      },
+      {
+         "id":"herramienta_3",
+         "tipo":"Herramienta",
+         "nombre":"Tanque de Gasolina",
+         "escenaAsignada":4,
+         "posX":2.0,
+         "posY":5.0,
+         "posZ":38.0
+      }
+   ]
+}

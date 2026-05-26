@@ -1,0 +1,19 @@
+{
+   "niveles":[
+      {
+         "numeroNivel":1,
+         "tiempoSegundos":300.0,
+         "mensajeEntrada":"Estas frente al Gran Arbol. Aqui inicia la Selva. Debes recuperar el Cristal 1 y la Herramienta 1 vigilando a los monos territoriales."
+      },
+      {
+         "numeroNivel":2,
+         "tiempoSegundos":240.0,
+         "mensajeEntrada":"Te acercas a la Roca de la Cueva Antigua. Adentro hay bombas ocultas que te perseguiran si te acercas demasiado."
+      },
+      {
+         "numeroNivel":3,
+         "tiempoSegundos":180.0,
+         "mensajeEntrada":"¡Cuidado! El Volcan esta activo. Las bolas de fuego caen del cielo aleatoriamente. Encuentra los ultimos componentes rapido."
+      }
+   ]
+}
