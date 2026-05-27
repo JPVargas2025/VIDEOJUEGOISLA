@@ -143,4 +143,4 @@ public class GameManager : MonoBehaviour
             Debug.Log("Partida cargada con éxito.");
         }
     }
-} // 🌟 Esta es la llave final que cierra la clase de la que Unity se quejaba
+} 

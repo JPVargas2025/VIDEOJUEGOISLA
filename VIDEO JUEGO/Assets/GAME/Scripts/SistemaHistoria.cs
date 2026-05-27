@@ -178,4 +178,4 @@ public class SistemaHistoria : MonoBehaviour
             }
         }
     }
-} // 🌟 Llave final que cierra toda la clase
+}

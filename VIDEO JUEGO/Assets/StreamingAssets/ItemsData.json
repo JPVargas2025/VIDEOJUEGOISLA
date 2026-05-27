@@ -24,7 +24,7 @@
          "nombre":"Cristal Brillante",
          "escenaAsignada":3,
          "posX":15.0,
-         "posY":-2.0,
+         "posY":1.0,
          "posZ":20.0
       },
       {
@@ -33,7 +33,7 @@
          "nombre":"Aceite de Motor",
          "escenaAsignada":3,
          "posX":8.0,
-         "posY":-1.5,
+         "posY":1,
          "posZ":22.0
       },
       {
@@ -42,7 +42,7 @@
          "nombre":"Cristal Volcánico",
          "escenaAsignada":4,
          "posX":0.0,
-         "posY":5.0,
+         "posY":1.0,
          "posZ":35.0
       },
       {
@@ -51,7 +51,7 @@
          "nombre":"Tanque de Gasolina",
          "escenaAsignada":4,
          "posX":2.0,
-         "posY":5.0,
+         "posY":1.0,
          "posZ":38.0
       }
    ]
