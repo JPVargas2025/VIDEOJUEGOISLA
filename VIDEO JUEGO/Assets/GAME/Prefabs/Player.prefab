@@ -55,13 +55,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.8
+  m_Height: 1.7
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.86, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &8719283084018294544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovimientoExploradora
   walkSpeed: 5
-  runSpeed: 9
-  rotationSpeed: 10
-  jumpForce: 5
+  runSpeed: 10
+  rotationSpeed: 5
+  jumpForce: 2
   gravity: -15
   followCamera: {fileID: 0}
 --- !u!1 &6412340342888869476
