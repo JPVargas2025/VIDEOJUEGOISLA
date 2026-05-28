@@ -3,7 +3,7 @@
       {
          "id":"cristal_1",
          "tipo":"Cristal",
-         "nombre":"Cristal de la Selva",
+         "nombre":"Núcleo Mecánico",
          "escenaAsignada":2,
          "posX":5.0,
          "posY":1.0,
@@ -21,7 +21,7 @@
       {
          "id":"cristal_2",
          "tipo":"Cristal",
-         "nombre":"Cristal Brillante",
+         "nombre":"Cristal de Rayo",
          "escenaAsignada":3,
          "posX":15.0,
          "posY":1.0,
@@ -30,7 +30,7 @@
       {
          "id":"herramienta_2",
          "tipo":"Herramienta",
-         "nombre":"Aceite de Motor",
+         "nombre":"Batería Sci-Fi",
          "escenaAsignada":3,
          "posX":8.0,
          "posY":1,
@@ -39,7 +39,7 @@
       {
          "id":"cristal_3",
          "tipo":"Cristal",
-         "nombre":"Cristal Volcánico",
+         "nombre":"Cristal de Fuego",
          "escenaAsignada":4,
          "posX":0.0,
          "posY":1.0,
@@ -48,7 +48,7 @@
       {
          "id":"herramienta_3",
          "tipo":"Herramienta",
-         "nombre":"Tanque de Gasolina",
+         "nombre":"Tanque de Combustible",
          "escenaAsignada":4,
          "posX":2.0,
          "posY":1.0,

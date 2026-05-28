@@ -757,22 +757,46 @@ MonoBehaviour:
   - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
   - {fileID: -110904123, guid: f83e918513dde9b4a8772c6f98693b91, type: 3}
   textosIntro:
-  - aaaaa
-  - bbbbb
-  - cccc
-  - dddd
-  - eeee
+  - "Alerta del Sistema: \xA1Alarma! \xA1Alarma! \xA1Capitana Lila, perdemos su se\xF1al
+    de navegaci\xF3n! El motor de hiper-salto est\xE1 sufriendo una sobrecarga cr\xEDtica.
+    \xA1Fallo catastr\xF3fico en el n\xFAcleo!"
+  - "Lila: \xA1No, no, no! \xA1El sistema de defensa magn\xE9tica no responde! La
+    nave ha sido atrapada por el campo gravitatorio de este sector... Es una fuerza
+    inmensa, \xA1no comprendo qu\xE9 la genera!"
+  - "Lila: \xA1Los propulsores no se estabilizan, creo que he perdido el rumbo por
+    completo! Espera... \xBFQu\xE9 es eso en el radar? \xBFQu\xE9 es esa extra\xF1a
+    isla rodeada de destellos de cristal?"
+  - "Lila: \xA1Aqu\xED la Capitana Lila transmitiendo en frecuencia de emergencia!
+    No voy a poder aterrizar... \xA1Impacto inminente en la costa! \xA1Impacto en
+    3... 2... 1...!"
+  - "Lila: (Tosiendo entre el humo) \xBFD\xF3nde... d\xF3nde estoy? Qu\xE9 lugar
+    tan misterioso. La nave ha quedado destrozada, sin energ\xEDa y sin agua... Debo
+    explorar este lugar si quiero salir viva de aqu\xED.\r\n"
   imagenesMision1:
   - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
   - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
   - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
+  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
+  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
   textosMision1:
-  - fffff
-  - ggggg
-  - hhhhhh
+  - "Lila: \xBFQu\xE9 es esta selva misteriosa? Todo est\xE1 demasiado oscuro y no
+    se escucha absolutamente nada... Es un silencio aterrador."
+  - "Lila: \xA1Ah\xED est\xE1n! El radar no ment\xEDa. Parece que el Cristal de Agua
+    est\xE1 custodiado por unas bestias extra\xF1as, y el N\xFAcleo Mec\xE1nico tambi\xE9n
+    est\xE1 a su alcance. Tendr\xE9 que ser sigilosa.\r\n"
+  - "Lila: \xA1Oh, no! \xA1Son monos salvajes de la jungla y me han descubierto!
+    (Se escuchan disparos de bl\xE1ster y rugidos) \xA1Tomen esto! No me dar\xE9
+    por vencida tan f\xE1cil."
+  - "Lila: \xA1En hora buena! \xA1Tengo el Cristal de Agua y el N\xFAcleo Mec\xE1nico
+    a salvo! He logrado salir de esta peligrosa selva de una pieza."
+  - "Lila: \xA1Listo! He reparado la primera secci\xF3n. Los sensores indican que
+    la energ\xEDa ha subido y que el N\xFAcleo Mec\xE1nico ha arreglado el da\xF1o
+    del soporte vital de la nave. \xA1Perfecto! El agua vuelve a fluir."
   imagenesMision2:
   - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
   - {fileID: -110904123, guid: f83e918513dde9b4a8772c6f98693b91, type: 3}
+  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
+  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
   - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
   textosMision2:
   - iiiiii
@@ -781,6 +805,8 @@ MonoBehaviour:
   imagenesMision3:
   - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
   - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
+  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
+  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
   - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
   textosMision3:
   - lllll
