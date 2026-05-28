@@ -1,14 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PanelNivelesUI : MonoBehaviour
 {
     [Header("Referencias de UI")]
     public GameObject panelNiveles;
-    public TextMeshProUGUI textoTitulo;       // <-- NUEVO: Para "Misión 1: La Selva"
-    public TextMeshProUGUI textoDescripcion;  // <-- Para las instrucciones largas
+    public TextMeshProUGUI textoTitulo;      
+    public TextMeshProUGUI textoDescripcion; 
     public Button botonComenzar;
     public Button botonSalir;
 
@@ -26,16 +26,14 @@ public class PanelNivelesUI : MonoBehaviour
             botonSalir.onClick.AddListener(CerrarPanel);
     }
 
-    // Ahora recibe el objeto completo que se leyó del JSON
     public void MostrarPanelMision(DatosMision datos)
     {
         if (datos == null) return;
 
         escenaDestino = datos.nombreEscena;
         
-        // Asignamos de forma separada los textos correspondientes del JSON
-        textoTitulo.text = datos.tituloMision;
-        textoDescripcion.text = datos.descripcionMision;
+        textoTitulo.text = "Misión " + datos.numeroNivel + ": " + datos.nombreNivel;
+        textoDescripcion.text = datos.descripcionPlaya;
 
         panelNiveles.SetActive(true);
     }

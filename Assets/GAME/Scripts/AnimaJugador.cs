@@ -14,7 +14,7 @@ public class AnimaJugador : MonoBehaviour
         if (animator != null) 
         {
             animator.SetBool("walk", false);
-            animator.SetBool("run", false); // Apagamos correr
+            animator.SetBool("run", false); 
         }
     } 
 
@@ -23,16 +23,16 @@ public class AnimaJugador : MonoBehaviour
         if (animator != null) 
         {
             animator.SetBool("walk", true);
-            animator.SetBool("run", false); // Caminar no es correr
+            animator.SetBool("run", false); 
         }
     } 
 
-    public static void Run() // 🌟 ¡NUEVA FUNCIÓN!
+    public static void Run() 
     {         
         if (animator != null) 
         {
-            animator.SetBool("walk", true); // Correr también cuenta como moverse
-            animator.SetBool("run", true);  // Activamos correr
+            animator.SetBool("walk", true); 
+            animator.SetBool("run", true); 
         }
     } 
 

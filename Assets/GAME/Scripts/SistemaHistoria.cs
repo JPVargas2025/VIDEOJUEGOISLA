@@ -8,8 +8,14 @@ public class SistemaHistoria : MonoBehaviour
 {
     [Header("Referencias de la UI Base")]
     public Image contenedorImagen;
+    public GameObject panelTextoNarrativo;
     public TextMeshProUGUI textoNarrativoUI;
     public Button botonSiguiente;
+
+    [Header("Configuración de Velocidad Texto")]
+    [Range(0.005f, 0.1f)] 
+    [Tooltip("Menor número = Más rápido. Mayor número = Más lento.")]
+    public float velocidadEscritura = 0.02f;
 
     [Header("Paneles Especiales (Cierre del Juego)")]
     public GameObject panelVictoriaFinal;
@@ -18,23 +24,23 @@ public class SistemaHistoria : MonoBehaviour
 
     [Header("Contenido Narrativo: INTRODUCCIÓN")]
     public Sprite[] imagenesIntro;
-    [TextArea(3, 5)] public string[] textosIntro;
+    [Multiline(3)] public string[] textosIntro;
 
     [Header("Contenido Narrativo: POST MISIÓN 1 (SELVA)")]
     public Sprite[] imagenesMision1;
-    [TextArea(3, 5)] public string[] textosMision1;
+    [Multiline(3)] public string[] textosMision1;
 
     [Header("Contenido Narrativo: POST MISIÓN 2 (CUEVA)")]
     public Sprite[] imagenesMision2;
-    [TextArea(3, 5)] public string[] textosMision2;
+    [Multiline(3)] public string[] textosMision2;
 
     [Header("Contenido Narrativo: POST MISIÓN 3 (VOLCÁN)")]
     public Sprite[] imagenesMision3;
-    [TextArea(3, 5)] public string[] textosMision3;
+    [Multiline(3)] public string[] textosMision3;
 
     [Header("Contenido Narrativo: FINAL (CINEMÁTICA NAVE)")]
     public Sprite[] imagenesFinal;
-    [TextArea(3, 5)] public string[] textosFinal;
+    [Multiline(3)] public string[] textosFinal;
 
     private Sprite[] imagenesActivas;
     private string[] textosActivos;
@@ -51,9 +57,11 @@ public class SistemaHistoria : MonoBehaviour
         
         if (botonSalirDelJuego != null) 
             botonSalirDelJuego.onClick.AddListener(Application.Quit);
-
-        // Aseguramos que el panel de Win empiece completamente apagado
+            
         if (panelVictoriaFinal != null) panelVictoriaFinal.SetActive(false);
+
+        // Aseguramos que el panel de texto esté encendido al comenzar
+        if (panelTextoNarrativo != null) panelTextoNarrativo.SetActive(true);
 
         ConfigurarFlujoDeHistoria();
     }
@@ -119,7 +127,9 @@ public class SistemaHistoria : MonoBehaviour
         foreach (char letra in textoCompleto)
         {
             textoNarrativoUI.text += letra;
-            yield return new WaitForSeconds(0.02f); 
+            
+            // 🌟 Ahora usa el valor que configures en la barrita de Unity:
+            yield return new WaitForSeconds(velocidadEscritura); 
         }
 
         estaEscribiendo = false;
@@ -147,6 +157,8 @@ public class SistemaHistoria : MonoBehaviour
                 botonSiguiente.gameObject.SetActive(false);
                 textoNarrativoUI.gameObject.SetActive(false);
                 
+                if (panelTextoNarrativo != null) panelTextoNarrativo.SetActive(false);
+                
                 if (panelVictoriaFinal != null)
                 {
                     panelVictoriaFinal.SetActive(true);
@@ -154,7 +166,6 @@ public class SistemaHistoria : MonoBehaviour
             }
             else
             {
-                // 🌟 ACTUALIZACIÓN DE FLUJO Y GUARDADO AUTOMÁTICO SINCRO
                 if (GameManager.Instancia != null)
                 {
                     if (GameManager.Instancia.proximaHistoria == GameManager.ModoHistoria.Intro)
@@ -170,7 +181,6 @@ public class SistemaHistoria : MonoBehaviour
                         GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision3;
                     }
 
-                    // Forzamos el guardado físico antes de cambiar de nivel
                     GameManager.Instancia.GuardarDatosEnJson();
                 }
 

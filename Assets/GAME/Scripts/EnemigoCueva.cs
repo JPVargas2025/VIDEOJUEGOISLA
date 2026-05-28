@@ -3,11 +3,9 @@ using UnityEngine;
 public class EnemigoCueva : MonoBehaviour
 {
     [Header("Configuración de Movimiento")]
-    [Tooltip("Velocidad a la que se mueve el enemigo. Puede ser lenta o rápida.")]
     public float velocidadMovimiento = 3f;
 
     [Header("Ruta de Patrulla")]
-    [Tooltip("Puntos por los que el enemigo transitará en bucle o línea recta.")]
     public Transform[] puntosRuta;
     private int indicePuntoActual = 0;
 
@@ -27,7 +25,6 @@ public class EnemigoCueva : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, objetivo, velocidadMovimiento * Time.deltaTime);
         transform.LookAt(objetivo);
 
-        // Cambiar al siguiente punto al acercarse al objetivo
         if (Vector3.Distance(transform.position, objetivo) < 0.2f)
         {
             indicePuntoActual = (indicePuntoActual + 1) % puntosRuta.Length;

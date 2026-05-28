@@ -1,20 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // 🌟 Necesario para los componentes de texto
+using System.IO;
 
 public class CartelInventario : MonoBehaviour
 {
     [Header("Referencias de UI")]
     public GameObject panelInventario;
     
-    [Header("Imágenes de Ítems (Asignar en orden: C1, H1, C2, H2, C3, H3)")]
-    [Tooltip("0: Cristal Selva, 1: Herramienta Selva, 2: Cristal Cueva, 3: Herramienta Cueva, 4: Cristal Volcán, 5: Herramienta Volcán")]
-    public Image[] imagenesItems;
+    [Header("Imágenes de Ítems")]
+    public Image[] imagenesItems; 
+
+    [Header("Textos de Ítems (Asignar en el mismo orden de arriba)")]
+    public TextMeshProUGUI[] textosTitulos;      
+    public TextMeshProUGUI[] textosDescripciones; 
+
+    private string rutaJson;
+    private ItemsWrapper baseDatosItems; 
 
     void Start()
     {
         if (panelInventario != null)
         {
             panelInventario.SetActive(false);
+        }
+
+        rutaJson = Path.Combine(Application.streamingAssetsPath, "ItemsData.json");
+        CargarBaseDatosItems();
+    }
+
+    private void CargarBaseDatosItems()
+    {
+        if (File.Exists(rutaJson))
+        {
+            string contenido = File.ReadAllText(rutaJson);
+            baseDatosItems = JsonUtility.FromJson<ItemsWrapper>(contenido);
+        }
+        else
+        {
+            Debug.LogError("No se encontró el archivo ItemsData.json en StreamingAssets");
         }
     }
 
@@ -52,7 +76,6 @@ public class CartelInventario : MonoBehaviour
 
         var datos = GameManager.Instancia.datosJugador;
 
-        // Arreglo temporal con el estado de cada ítem
         bool[] itemsRecolectados = new bool[]
         {
             datos.cristal1Recogido,
@@ -63,19 +86,34 @@ public class CartelInventario : MonoBehaviour
             datos.herramienta3Recogida
         };
 
-        // Cambiar el color según si se recogió o no
+       
         for (int i = 0; i < 6; i++)
         {
+            
+            if (baseDatosItems != null && i < baseDatosItems.items.Length)
+            {
+                ItemConfig infoItem = baseDatosItems.items[i]; // Tu molde original
+
+                if (textosTitulos != null && i < textosTitulos.Length && textosTitulos[i] != null)
+                {
+                    textosTitulos[i].text = infoItem.nombre;
+                }
+
+                if (textosDescripciones != null && i < textosDescripciones.Length && textosDescripciones[i] != null)
+                {
+                    textosDescripciones[i].text = infoItem.descripcion;
+                }
+            }
+
             if (imagenesItems[i] != null)
             {
                 if (itemsRecolectados[i])
                 {
-                    imagenesItems[i].color = Color.white; // A todo color
+                    imagenesItems[i].color = Color.white;
                 }
                 else
                 {
-                    // Convertir a escala de grises (Color.gray funciona bien en la mayoría de los casos sin material custom)
-                    imagenesItems[i].color = Color.gray; 
+                    imagenesItems[i].color = Color.gray;  
                 }
             }
         }

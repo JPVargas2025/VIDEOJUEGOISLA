@@ -12,15 +12,15 @@ public class MovimientoExploradora : MonoBehaviour
 
     [Header("Configuración de Movimiento")]
 
-    public float walkSpeed = 5.0f;       // Velocidad al caminar
+    public float walkSpeed = 5.0f;       
 
-    public float runSpeed = 9.0f;        // Velocidad al correr 🏃‍♀️
+    public float runSpeed = 9.0f;       
 
-    public float rotationSpeed = 10.0f;  // Velocidad de rotación del personaje
+    public float rotationSpeed = 10.0f;  
 
-    public float jumpForce = 5.0f;       // Fuerza de salto
+    public float jumpForce = 5.0f;       
 
-    public float gravity = -15.0f;       // Fuerza de gravedad ajustable
+    public float gravity = -15.0f;       
 
 
 
@@ -45,9 +45,6 @@ public class MovimientoExploradora : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
 
-
-        // Si no se asignó cámara en el inspector, busca la MainCamera automática
-
         if (followCamera == null && Camera.main != null)
 
         {
@@ -59,12 +56,9 @@ public class MovimientoExploradora : MonoBehaviour
     }
 
 
-
     void Update()
 
     {
-
-        // 1. Verificar si está tocando el suelo nativamente con el CharacterController
 
         isGrounded = controller.isGrounded;
 
@@ -74,15 +68,11 @@ public class MovimientoExploradora : MonoBehaviour
 
         {
 
-            // Pequeña fuerza constante hacia abajo para evitar que el personaje "baile" o flote en pendientes
 
             playerVelocity.y = -2f; 
 
         }
 
-
-
-        // 2. Captura de Inputs con el nuevo Input System
 
         float h = 0f;
 
@@ -105,16 +95,10 @@ public class MovimientoExploradora : MonoBehaviour
         }
 
 
-
-        // 3. Calcular la dirección del movimiento orientada a la posición de la cámara
-
         Vector3 cameraForward = Vector3.Scale(followCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
 
         Vector3 moveDirection = (followCamera.transform.right * h + cameraForward * v).normalized;
 
-
-
-        // 4. Detectar si corre con Shift izquierdo
 
         bool estaCorriendo = false;
 
@@ -126,17 +110,10 @@ public class MovimientoExploradora : MonoBehaviour
 
         }
 
-
-
-        // Seleccionar velocidad final basada en el estado
-
         float velocidadActual = estaCorriendo ? runSpeed : walkSpeed;
 
         Vector3 movimientoFinal = moveDirection * velocidadActual;
 
-
-
-        // 5. Control de Animaciones de movimiento y Rotación del personaje
 
         if (moveDirection != Vector3.zero)
 
@@ -146,7 +123,7 @@ public class MovimientoExploradora : MonoBehaviour
 
             {
 
-                AnimaJugador.Run(); // Animación de Correr 🏃‍♀️
+                AnimaJugador.Run();
 
             }
 
@@ -154,13 +131,9 @@ public class MovimientoExploradora : MonoBehaviour
 
             {
 
-                AnimaJugador.Walk(); // Animación de Caminar 🚶‍♀️
+                AnimaJugador.Walk(); 
 
             }
-
-
-
-            // Rotar suavemente al personaje hacia la dirección a la que se mueve
 
             Quaternion rotacionObjetivo = Quaternion.LookRotation(moveDirection, Vector3.up);
 
@@ -172,19 +145,13 @@ public class MovimientoExploradora : MonoBehaviour
 
         {
 
-            AnimaJugador.Idle(); // Animación de estar quieto 🧍‍♀️
+            AnimaJugador.Idle(); 
 
         }
-
-
-
-        // 6. Lógica de Salto (Solo si está en el suelo)
 
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
 
         {
-
-            // Fórmula física matemática exacta para la altura del salto basada en la gravedad
 
             playerVelocity.y = Mathf.Sqrt(jumpForce * -2.0f * gravity);
 
@@ -193,22 +160,11 @@ public class MovimientoExploradora : MonoBehaviour
         }
 
 
-
-        // 7. Aplicar Gravedad de forma independiente (Acumulativa en el eje Y)
-
         playerVelocity.y += gravity * Time.deltaTime;
 
+        Vector3 desplazamientoFinal = movimientoFinal * Time.deltaTime;
 
-
-        // 8. Separación de DeltaTime para evitar el efecto de flotación constante
-
-        Vector3 desplazamientoFinal = movimientoFinal * Time.deltaTime; // Aplica deltaTime a X y Z
-
-        desplazamientoFinal.y = playerVelocity.y * Time.deltaTime;       // Aplica su propio deltaTime a Y
-
-
-
-        // 9. Ejecutar el movimiento en el CharacterController
+        desplazamientoFinal.y = playerVelocity.y * Time.deltaTime;
 
         controller.Move(desplazamientoFinal);
 
@@ -222,10 +178,8 @@ public class MovimientoExploradora : MonoBehaviour
 
         AnimaJugador.Victory();
 
-        this.enabled = false; // Desactiva el script para que el jugador no pueda moverse tras ganar
-
+        this.enabled = false; 
     }
-
 
 
     public void ActivarMuerte()
@@ -234,7 +188,7 @@ public class MovimientoExploradora : MonoBehaviour
 
         AnimaJugador.Die();
 
-        this.enabled = false; // Desactiva el script para que el jugador no se mueva al perder
+        this.enabled = false;
 
     }
 

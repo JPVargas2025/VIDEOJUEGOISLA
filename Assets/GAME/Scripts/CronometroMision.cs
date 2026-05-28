@@ -1,5 +1,5 @@
-using System.IO;
 using UnityEngine;
+using System.IO;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -16,6 +16,10 @@ public class CronometroMision : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoNotificacion; 
     [SerializeField] private float tiempoVisible = 3f;         
 
+    [Header("UI del Panel FIJO de la Misión (NUEVO)")]
+    [SerializeField] private GameObject panelMisionFijo;       
+    [SerializeField] private TextMeshProUGUI textoMisionFijo;   
+
     [Header("Identificador del Nivel")]
     public int nivelActual = 1; 
 
@@ -25,37 +29,60 @@ public class CronometroMision : MonoBehaviour
 
     void Start()
     {
-        CargarTiempoDesdeJson();
+        CargarTiempoYMensajeDesdeJson();
+        
         if(panelPerdisteMisionUI != null) panelPerdisteMisionUI.SetActive(false);
         if(panelVictoriaUI != null) panelVictoriaUI.SetActive(false);
-        
         if(panelNotificacion != null) panelNotificacion.SetActive(false);
+
+        if (panelMisionFijo != null) panelMisionFijo.SetActive(true);
     }
 
-    void CargarTiempoDesdeJson()
+    void CargarTiempoYMensajeDesdeJson()
     {
         string ruta = Path.Combine(Application.streamingAssetsPath, "NivelesData.json");
 
         if (File.Exists(ruta))
         {
             string contenidoJson = File.ReadAllText(ruta);
-            NivelesWrapper wrapper = JsonUtility.FromJson<NivelesWrapper>(contenidoJson);
-            foreach (ConfigNivel config in wrapper.niveles)
+            ListaMisiones wrapper = JsonUtility.FromJson<ListaMisiones>(contenidoJson);
+            
+            foreach (DatosMision config in wrapper.niveles)
             {
                 if (config.numeroNivel == nivelActual)
                 {
                     tiempoRestante = config.tiempoSegundos;
-                    cronometroActivo = true;
+                    cronometroActivo = true;     
+               
+                    MostrarTextoEmergente(config.mensajeEntrada);
+
+                    ActualizarPanelMisionFijo(config);
                     break;
                 }
             }
         }
         else
         {
-            Debug.LogError("No se pudo leer NivelesData.json. Usando tiempo por defecto.");
+            Debug.LogError("No se pudo leer NivelesData.json en StreamingAssets. Usando tiempo por defecto.");
             tiempoRestante = 300f; 
             cronometroActivo = true;
+
+            if (textoMisionFijo != null)
+            {
+                textoMisionFijo.text = $"<b>NIVEL {nivelActual}</b>\nExplorando la Isla...";
+            }
         }
+    }
+
+    void ActualizarPanelMisionFijo(DatosMision config)
+    {
+        if (textoMisionFijo == null) return;
+
+      
+        string nombreDeLaMision = !string.IsNullOrEmpty(config.nombreNivel) ? config.nombreNivel : "Misión de Exploración";
+        textoMisionFijo.text = $"<b><color=#FF0000>Nivel {config.numeroNivel}</color></b>\n" +
+                               $"<b>Nombre:</b> {nombreDeLaMision}\n" +
+                               $"<b>Objetivo:</b> {config.mensajeEntrada}";
     }
 
     void Update()
@@ -92,10 +119,7 @@ public class CronometroMision : MonoBehaviour
         MovimientoExploradora exploradora = FindFirstObjectByType<MovimientoExploradora>();
         if (exploradora != null) exploradora.ActivarMuerte();
 
-        if (panelPerdisteMisionUI != null)
-        {
-            panelPerdisteMisionUI.SetActive(true);
-        }
+        if (panelPerdisteMisionUI != null) panelPerdisteMisionUI.SetActive(true);
     }
 
     public void ActivarVictoria()
@@ -108,24 +132,15 @@ public class CronometroMision : MonoBehaviour
         MovimientoExploradora exploradora = FindFirstObjectByType<MovimientoExploradora>();
         if (exploradora != null) exploradora.ActivarVictoria();
 
-        if (GameManager.Instancia != null)
-        {
-            GameManager.Instancia.VictoriaMision(nivelActual);
-        }
+        if (GameManager.Instancia != null) GameManager.Instancia.VictoriaMision(nivelActual);
 
-        if (panelVictoriaUI != null)
-        {
-            panelVictoriaUI.SetActive(true);
-        }
+        if (panelVictoriaUI != null) panelVictoriaUI.SetActive(true);
     }
 
     public void MostrarTextoEmergente(string mensaje)
     {
         if (panelNotificacion == null || textoNotificacion == null) return;
-        if (rutinaNotificacion != null)
-        {
-            StopCoroutine(rutinaNotificacion);
-        }
+        if (rutinaNotificacion != null) StopCoroutine(rutinaNotificacion);
 
         rutinaNotificacion = StartCoroutine(AnimarTexto(mensaje));
     }
@@ -154,22 +169,12 @@ public class CronometroMision : MonoBehaviour
         {
             switch (nivelActual)
             {
-                case 1:
-                    GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision1; 
-                    break;
-                case 2:
-                    GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision2; 
-                    break;
-                case 3:
-                    GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision3; 
-                    break;
-                default:
-                    Debug.LogWarning("Nivel actual no reconocido en el switch de historia. Cargando Intro por defecto.");
-                    GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Intro;
-                    break;
+                case 1: GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision1; break;
+                case 2: GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision2; break;
+                case 3: GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Mision3; break;
+                default: GameManager.Instancia.proximaHistoria = GameManager.ModoHistoria.Intro; break;
             }
         }
-
         SceneManager.LoadScene(5);
     }
 }

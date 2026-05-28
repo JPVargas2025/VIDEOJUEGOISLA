@@ -1,6 +1,5 @@
 using System;
 
-// Clases molde para la Historia
 [Serializable]
 public class PaginaHistoria
 {
@@ -14,7 +13,6 @@ public class HistoriaWrapper
     public PaginaHistoria[] paginas;
 }
 
-// Clases molde para los Niveles
 [Serializable]
 public class ConfigNivel
 {

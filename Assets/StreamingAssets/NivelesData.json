@@ -1,19 +1,28 @@
 {
    "niveles":[
       {
-         "numeroNivel":1,
-         "tiempoSegundos":300.0,
-         "mensajeEntrada":"Estas frente al Gran Arbol. Aqui inicia la Selva. Debes recuperar el Cristal 1 y la Herramienta 1 vigilando a los monos territoriales."
+         "numeroNivel": 1,
+         "nombreNivel": "La Selva Profunda",
+         "nombreEscena": "Selva",
+         "tiempoSegundos": 300.0,
+         "descripcionPlaya": "La selva está llena de terrores, ¡ten mucho cuidado! ¿Estás lista para probar tu valentía?",
+         "mensajeEntrada": "Evita a los monos territoriales y recupera el Cristal de Agua junto al Núcleo Mecánico."
       },
       {
-         "numeroNivel":2,
-         "tiempoSegundos":240.0,
-         "mensajeEntrada":"Te acercas a la Roca de la Cueva Antigua. Adentro hay bombas ocultas que te perseguiran si te acercas demasiado."
+         "numeroNivel": 2,
+         "nombreNivel": "Las Cuevas Cristalinas",
+         "nombreEscena": "Cueva",
+         "tiempoSegundos": 240.0,
+         "descripcionPlaya": "La oscuridad de las cuevas esconde secretos mecánicos ancestrales. No dejes que la presión te venza.",
+         "mensajeEntrada": "Cuidado con las bombas mecánicas del suelo. Encuentra el Cristal de Rayo y la Batería Sci-Fi."
       },
       {
-         "numeroNivel":3,
-         "tiempoSegundos":180.0,
-         "mensajeEntrada":"¡Cuidado! El Volcan esta activo. Las bolas de fuego caen del cielo aleatoriamente. Encuentra los ultimos componentes rapido."
+         "numeroNivel": 3,
+         "nombreNivel": "El Corazón del Volcán",
+         "nombreEscena": "Volcan",
+         "tiempoSegundos": 180.0,
+         "descripcionPlaya": "Fase final. El magma sube y la isla va a colapsar. ¡Corre por los últimos componentes antes de que todo estalle!",
+         "mensajeEntrada": "Evita los meteoros de fuego. Asegura el Cristal de Fuego y el Tanque de Combustible."
       }
    ]
 }

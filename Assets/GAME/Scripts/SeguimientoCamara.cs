@@ -14,13 +14,10 @@ public class SeguimientoCamara : MonoBehaviour
     {
         if (targetCamara == null) return;
 
-        // Calcular la posición rotando el desfase junto con el cuello del jugador
         Vector3 posicionDeseada = targetCamara.position + (targetCamara.forward * offset.z) + (targetCamara.up * offset.y);
         
-        // Lerp suavizado independiente de los frames (FPS)
         transform.position = Vector3.Lerp(transform.position, posicionDeseada, suavizado * Time.deltaTime);
 
-        // Apuntar fijamente hacia el cuello/cabeza del jugador
         transform.LookAt(targetCamara.position);
     }
 }

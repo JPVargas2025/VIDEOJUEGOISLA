@@ -3,13 +3,8 @@ using UnityEngine;
 public class EnemigoCueva2 : MonoBehaviour
 {
     [Header("Configuración de Órbita (Sistema Solar)")]
-    [Tooltip("El punto central alrededor del cual este enemigo orbitará (Ej. un objeto vacío en el centro de la cueva).")]
     public Transform centroOrbita;
-    
-    [Tooltip("Velocidad de rotación alrededor del centro.")]
     public float velocidadOrbita = 50f;
-
-    [Tooltip("Si es verdadero, el enemigo siempre mirará en la dirección hacia la que se mueve.")]
     public bool mirarHaciaAdelante = true;
 
     private void Update()
@@ -25,15 +20,12 @@ public class EnemigoCueva2 : MonoBehaviour
             return;
         }
 
-        // Posición actual antes de movernos para calcular la dirección hacia donde miramos
         Vector3 posicionAnterior = transform.position;
 
-        // Rotar alrededor del punto central sobre el eje Y (Arriba)
         transform.RotateAround(centroOrbita.position, Vector3.up, velocidadOrbita * Time.deltaTime);
 
         if (mirarHaciaAdelante)
         {
-            // Calcular la dirección en la que nos acabamos de mover y mirar hacia allá
             Vector3 direccionMovimiento = (transform.position - posicionAnterior).normalized;
             if (direccionMovimiento != Vector3.zero)
             {

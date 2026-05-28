@@ -4,8 +4,9 @@ using System;
 public class ItemConfig
 {
     public string id;
-    public string tipo; // Cristal o Herramienta
+    public string tipo; 
     public string nombre;
+    public string descripcion;
     public int escenaAsignada;
     public float posX;
     public float posY;

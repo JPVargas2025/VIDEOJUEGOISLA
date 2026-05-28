@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic; // Asegúrate de tener esta línea arriba
+using System.Collections.Generic; 
 
 public class SpawnerItems : MonoBehaviour
 {
     [Header("Lista de Prefabs de tu Juego")]
-    // Aquí arrastrarás los 6 prefabs reales en el Inspector (3 cristales y 3 herramientas)
     public List<GameObject> listaPrefabs; 
 
     void Start()
@@ -42,7 +41,6 @@ public class SpawnerItems : MonoBehaviour
 
                 if (yaRecogido) continue; 
 
-                // --- NUEVA LÓGICA INTELIGENTE PARA BUSCAR EL ASSET CORRECTO ---
                 GameObject prefabAEmitir = BuscarPrefabPorID(item.id);
 
                 if (prefabAEmitir == null)
@@ -64,7 +62,6 @@ public class SpawnerItems : MonoBehaviour
         }
     }
 
-    // Función auxiliar que revisa la lista y encuentra el asset que machea con el JSON
     GameObject BuscarPrefabPorID(string idBuscado)
     {
         foreach (GameObject prefab in listaPrefabs)

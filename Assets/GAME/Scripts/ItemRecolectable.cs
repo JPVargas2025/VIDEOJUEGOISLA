@@ -30,7 +30,7 @@ public class ItemRecolectable : MonoBehaviour
             RegistrarRecoleccion();
 
            
-            GetComponent<Collider>().enabled = false; // Desactiva colisiones
+            GetComponent<Collider>().enabled = false;
             
             
             if (GetComponent<MeshRenderer>() != null) GetComponent<MeshRenderer>().enabled = false;

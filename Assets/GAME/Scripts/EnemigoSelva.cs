@@ -76,7 +76,6 @@ public class EnemigoSelva : MonoBehaviour
 
         if (sistemaDano != null)
         {
-            // Ejecuta el daño, activa el parpadeo rojo y la vibración
             sistemaDano.RecibirDano();
         }
         else

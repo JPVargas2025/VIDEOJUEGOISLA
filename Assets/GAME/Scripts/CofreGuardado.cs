@@ -64,7 +64,6 @@ public class CofreGuardado : MonoBehaviour
 
         textoMensaje.text = "Guardando partida...";
         
-        // --- GUARDADO REAL ---
         if (GameManager.Instancia != null)
         {
             GameManager.Instancia.GuardarDatosEnJson(); 

@@ -25,20 +25,14 @@ public class ControlNave : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // 🌟 NUEVO: Antes de mostrar el texto, obligamos al GameManager a leer el JSON
-            // para asegurarnos de que la RAM tiene las vidas, monedas y misiones actualizadas del nivel anterior.
             if (GameManager.Instancia != null)
             {
                 GameManager.Instancia.CargarDatosDesdeJson();
-                
-                // 🌟 EXCELENTE PRÁCTICA: Forzamos también al HUD local de la playa a actualizarse 
-                // con las monedas, vidas y elementos visuales reales que se acaban de cargar del JSON.
+           
                 ControladorHUD hudPlaya = FindFirstObjectByType<ControladorHUD>();
                 if (hudPlaya != null)
                 {
                     hudPlaya.CambiarVidas(GameManager.Instancia.datosJugador.vidas);
-                    // Si tienes un método en tu HUD para actualizar monedas, ponlo aquí, por ejemplo:
-                    // hudPlaya.ActualizarMonedas(GameManager.Instancia.datosJugador.monedas);
                 }
             }
 
@@ -68,22 +62,21 @@ public class ControlNave : MonoBehaviour
 
         var datos = GameManager.Instancia.datosJugador;
 
-        // Evaluamos el progreso real del JSON cargado
         if (TieneTodosLosItems())
         {
-            textoMensajeNave.text = "¡Enhorabuena! ¡La nave está totalmente arreglada! ¡Has ganado!";
+            textoMensajeNave.text = "¡En hora buena! La nave de Lila está perfectamente reparada y los motores marcan el 100%. ¡Dale \"OK\" para encenderla y salir de aquí!";
         }
         else if (!datos.mision1Completada)
         {
-            textoMensajeNave.text = "¡Oh no! La nave está averiada... ¡Ve a la selva!";
+            textoMensajeNave.text = "¡Oh no! Tu nave está apagada y el soporte vital fallando... ¡Ve a la selva por el Cristal de Agua y el Núcleo Mecánico!";
         }
         else if (datos.mision1Completada && !datos.mision2Completada)
         {
-            textoMensajeNave.text = "¡Oh no! ¡La nave tiene poco aceite! Ve a la cueva...";
+            textoMensajeNave.text = "¡Oh no! La nave se ha quedado sin energía eléctrica y los sistemas no responden... ¡Ve a la cueva por el Cristal de Rayo y la Batería Sci-Fi!";
         }
         else if (datos.mision2Completada && !datos.mision3Completada)
         {
-            textoMensajeNave.text = "¡Oh no! ¡La nave no tiene combustible! Ve al volcán...";
+            textoMensajeNave.text = "¡Oh no! La nave no tiene combustible para el despegue vertical y la isla está temblando... ¡Ve al volcán por el Cristal de Fuego y el Tanque de Combustible!";
         }
     }
 

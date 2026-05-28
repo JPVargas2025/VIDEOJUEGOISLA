@@ -6,7 +6,7 @@ public class SistemaDanoJugador : MonoBehaviour
     [Header("Configuración Visual")]
     public Renderer[] renderersJugador; 
     public float duracionEfecto = 1f;
-    public Transform modeloVisual; // Asignar el hijo que contiene el modelo 3D para hacerlo vibrar sin mover el CharacterController
+    public Transform modeloVisual; 
 
     private bool esVulnerable = true;
 
@@ -39,10 +39,9 @@ public class SistemaDanoJugador : MonoBehaviour
     {
         esVulnerable = false;
         
-        Color colorDano = new Color(1f, 0f, 0f, 0.5f); // Rojo semitransparente
+        Color colorDano = new Color(1f, 0f, 0f, 0.5f); 
         Color[] coloresOriginales = new Color[renderersJugador.Length];
 
-        // Cambiar color de los renderers
         for (int i = 0; i < renderersJugador.Length; i++)
         {
             if (renderersJugador[i] != null && renderersJugador[i].material.HasProperty("_Color"))
@@ -55,7 +54,6 @@ public class SistemaDanoJugador : MonoBehaviour
         float tiempoPasado = 0f;
         Vector3 posOriginalLocal = modeloVisual != null ? modeloVisual.localPosition : Vector3.zero;
 
-        // Bucle de vibración
         while (tiempoPasado < duracionEfecto)
         {
             if (modeloVisual != null)
@@ -69,13 +67,11 @@ public class SistemaDanoJugador : MonoBehaviour
             yield return null;
         }
 
-        // Restaurar posición
         if (modeloVisual != null)
         {
             modeloVisual.localPosition = posOriginalLocal;
         }
 
-        // Restaurar color original
         for (int i = 0; i < renderersJugador.Length; i++)
         {
             if (renderersJugador[i] != null && renderersJugador[i].material.HasProperty("_Color"))
