@@ -1078,10 +1078,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1031516135}
-    - target: {fileID: 1118952608106076159, guid: 09afd9140968b8442ac7353cede0ac79, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SiguienteNivel
-      objectReference: {fileID: 0}
     - target: {fileID: 5100742988959328590, guid: 09afd9140968b8442ac7353cede0ac79, type: 3}
       propertyPath: m_Name
       value: PanelMisionVictory
@@ -3541,10 +3537,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1031516135}
-    - target: {fileID: 3282618449645560847, guid: 8764adde3b0902749a8847e22236b7c9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReintentarNivel
-      objectReference: {fileID: 0}
     - target: {fileID: 5288345543734322870, guid: 8764adde3b0902749a8847e22236b7c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3629,10 +3621,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1031516135}
-    - target: {fileID: 7237922300520256195, guid: 8764adde3b0902749a8847e22236b7c9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SalirALaPlaya
-      objectReference: {fileID: 0}
     - target: {fileID: 7293520704570283739, guid: 8764adde3b0902749a8847e22236b7c9, type: 3}
       propertyPath: m_Name
       value: PanelMisionLose
