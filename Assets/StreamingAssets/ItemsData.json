@@ -46,9 +46,9 @@
          "nombre":"Cristal de Fuego",
          "descripcion":"Calor volcánico comprimido en estado sólido.",
          "escenaAsignada":4,
-         "posX":0.0,
-         "posY":1.0,
-         "posZ":35.0
+         "posX":-178.0,
+         "posY":24.0,
+         "posZ":412.0
       },
       {
          "id":"herramienta_3",
@@ -58,7 +58,7 @@
          "escenaAsignada":4,
          "posX":2.0,
          "posY":1.0,
-         "posZ":38.0
+         "posZ":-5.0
       }
    ]
 }
