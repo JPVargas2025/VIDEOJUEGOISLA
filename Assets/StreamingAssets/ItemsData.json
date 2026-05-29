@@ -26,9 +26,9 @@
          "nombre":"Cristal de Rayo",
          "descripcion":"Almacena energía cinética de tormentas eléctricas.",
          "escenaAsignada":3,
-         "posX":15.0,
+         "posX":-10.0,
          "posY":1.0,
-         "posZ":20.0
+         "posZ":-6.0
       },
       {
          "id":"herramienta_2",
@@ -36,9 +36,9 @@
          "nombre":"Batería Sci-Fi",
          "descripcion":"Generador cuántico portátil de larga duración.",
          "escenaAsignada":3,
-         "posX":8.0,
+         "posX":-7.0,
          "posY":1.0,
-         "posZ":22.0
+         "posZ":10.0
       },
       {
          "id":"cristal_3",

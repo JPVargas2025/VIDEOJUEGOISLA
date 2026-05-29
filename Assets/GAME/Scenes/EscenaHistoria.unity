@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 147.17}
-  m_SizeDelta: {x: 800, y: 84.0974}
+  m_AnchoredPosition: {x: -126, y: 11.751955}
+  m_SizeDelta: {x: 650, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95401619
 MonoBehaviour:
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.6
+  m_fontSize: 52.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -429,8 +429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -254, y: -150}
-  m_SizeDelta: {x: 200, y: 70}
+  m_AnchoredPosition: {x: -333, y: -210}
+  m_SizeDelta: {x: 163, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158180158
 MonoBehaviour:
@@ -753,11 +753,11 @@ MonoBehaviour:
   botonReiniciarJuego: {fileID: 158180158}
   botonSalirDelJuego: {fileID: 1327705158}
   imagenesIntro:
-  - {fileID: -110904123, guid: f83e918513dde9b4a8772c6f98693b91, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
-  - {fileID: -110904123, guid: f83e918513dde9b4a8772c6f98693b91, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
+  - {fileID: 384790374, guid: bd40bb1bfe32a4cdf8e601d883db2022, type: 3}
+  - {fileID: 327245600, guid: e5f460538d50d41c5bfa54017abaddea, type: 3}
+  - {fileID: 184519344, guid: 1949a9eb43d38485cb5eb4695a67a2cc, type: 3}
+  - {fileID: -10997609, guid: 31c6a5a9fa4c14811ab9ba8776bcdaab, type: 3}
+  - {fileID: 1945091192, guid: 0a9f4e413f67b4d94bc4de1152225efb, type: 3}
   textosIntro:
   - "Alerta del Sistema: \xA1Alarma! \xA1Alarma! \xA1Capitana Lila, perdemos su se\xF1al
     de navegaci\xF3n! El motor de hiper-salto est\xE1 sufriendo una sobrecarga cr\xEDtica.
@@ -775,11 +775,11 @@ MonoBehaviour:
     tan misterioso. La nave ha quedado destrozada, sin energ\xEDa y sin agua... Debo
     explorar este lugar si quiero salir viva de aqu\xED.\r\n"
   imagenesMision1:
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
-  - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
-  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
-  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
-  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
+  - {fileID: -1826269636, guid: 5b8303377241740d59a1d0fd2206d6be, type: 3}
+  - {fileID: -1001155695, guid: fcd9bf83ab01e41ee8244e030ed9e70e, type: 3}
+  - {fileID: 1489601199, guid: 1d2ad622c267d485d9966aea20e8697b, type: 3}
+  - {fileID: -918448567, guid: b478e2d4e39b44335bdf8a0c7b27294b, type: 3}
+  - {fileID: 1519627582, guid: 2fa41fe528ddb4842a82b38dcf4b008a, type: 3}
   textosMision1:
   - "Lila: \xBFQu\xE9 es esta selva misteriosa? Todo est\xE1 demasiado oscuro y no
     se escucha absolutamente nada... Es un silencio aterrador."
@@ -795,11 +795,11 @@ MonoBehaviour:
     la energ\xEDa ha subido y que el N\xFAcleo Mec\xE1nico ha arreglado el da\xF1o
     del soporte vital de la nave. \xA1Perfecto! El agua vuelve a fluir."
   imagenesMision2:
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
-  - {fileID: -110904123, guid: f83e918513dde9b4a8772c6f98693b91, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
-  - {fileID: -374677525, guid: 20c26779596fed7479230d517aab4666, type: 3}
+  - {fileID: 1301111042, guid: 352c774e177734594a8a3b433ce5692d, type: 3}
+  - {fileID: -1568993478, guid: 024cb5143edd447bfa18c60982a2aedd, type: 3}
+  - {fileID: 1679445340, guid: aad0941f24bb84650867f49caf50bf9e, type: 3}
+  - {fileID: -251687767, guid: 92ecc66bffc9741abb8ec30a0bc18a41, type: 3}
+  - {fileID: 12711032, guid: 193ad240255504527943fd95a8ad529e, type: 3}
   textosMision2:
   - "Lila: Esta cueva es gigantesca... El fr\xEDo cala hasta los huesos y las estalactitas
     de cristal brillan con una luz azulada muy extra\xF1a. Hay que pisar con cuidado."
@@ -816,11 +816,11 @@ MonoBehaviour:
     el Cristal de Rayo en su sitio, los motores secundarios vuelven a la vida. \xA1Ya
     casi salgo de esta!"
   imagenesMision3:
-  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
-  - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
+  - {fileID: 909508500, guid: ba6dd6b2617454d6d9b6ff65923652bf, type: 3}
+  - {fileID: 528160855, guid: 75fe477c14ff84012bf79441b745c538, type: 3}
+  - {fileID: -177262335, guid: 8085067e39bce43d29fe0844fd4eb8a4, type: 3}
+  - {fileID: 362026497, guid: fe92aeae420bf4951900dd403ddbab26, type: 3}
+  - {fileID: -1770297282, guid: 6b298c83e5c7b4557b5dcff3efa356de, type: 3}
   textosMision3:
   - "Lila: \xA1El calor es insoportable! El aire me quema y la lava sube a cada segundo.
     El mapa indica que los objetivos est\xE1n en la c\xE1mara central."
@@ -837,11 +837,11 @@ MonoBehaviour:
     est\xE1 en el tanque y la energ\xEDa de la nave se dispara. \xA1Todo est\xE1
     listo para el despegue!"
   imagenesFinal:
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
-  - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
-  - {fileID: 240673457, guid: f855e430a392caa4bb05c84ca489dc2b, type: 3}
-  - {fileID: 942344509, guid: ddbbb59a9fe6f1f4c856dcba83e7bbc8, type: 3}
-  - {fileID: -780863999, guid: 7f2b03c9a8b272748b9a65196b1173c5, type: 3}
+  - {fileID: -1780620599, guid: e4e4f2aca0df247169a4007446e2193d, type: 3}
+  - {fileID: 937032181, guid: 3c3746034c47c48a3bd3415cbab498f0, type: 3}
+  - {fileID: 650354089, guid: 55b19d9bfdc844c558b4c9a1cd06d762, type: 3}
+  - {fileID: 1491238680, guid: 59b560bd7e5044af391b070db75b7841, type: 3}
+  - {fileID: 680792293, guid: e390ae11a069e4d698c7f535caee83f8, type: 3}
   textosFinal:
   - "Lila: \xA1En hora buena! El combustible est\xE1 cargado y el tercer cristal
     brilla al m\xE1ximo. La nave est\xE1 totalmente arreglada y los sistemas marcan
@@ -1210,8 +1210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000025749, y: 0.0000042915}
-  m_SizeDelta: {x: 820.87, y: 210.2433}
+  m_AnchoredPosition: {x: -126.00003, y: -98.00001}
+  m_SizeDelta: {x: 670, y: 156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1045412382
 MonoBehaviour:
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.85
+  m_fontSize: 24.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.15
+  m_fontSize: 37
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1609,8 +1609,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 254, y: -150}
-  m_SizeDelta: {x: 200, y: 70}
+  m_AnchoredPosition: {x: 81, y: -210}
+  m_SizeDelta: {x: 163, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327705158
 MonoBehaviour:
@@ -1805,8 +1805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 80}
-  m_SizeDelta: {x: 1010, y: 510}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404627822
 MonoBehaviour:
@@ -1828,8 +1828,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1683855557, guid: e7ac5dd56a9004cb1a4d70e44aa68e6a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.15
+  m_fontSize: 37
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2169,7 +2169,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1500, y: 800}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905409177
 MonoBehaviour:
@@ -2243,8 +2243,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1010, y: 510}
+  m_AnchoredPosition: {x: -126, y: -98}
+  m_SizeDelta: {x: 820, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024374209
 MonoBehaviour:
@@ -2292,6 +2292,7 @@ GameObject:
   - component: {fileID: 2094433370}
   - component: {fileID: 2094433369}
   - component: {fileID: 2094433368}
+  - component: {fileID: 2094433371}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2373,6 +2374,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094433371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094433367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
