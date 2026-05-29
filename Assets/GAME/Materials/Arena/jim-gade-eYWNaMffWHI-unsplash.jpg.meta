@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 6c5a1b40f3ca7ca4387069f858bde7b3
+<<<<<<< HEAD:Assets/GAME/Imagenes/dinero.png.meta
+guid: 124c9868e4cd7482a9164820e564dbe1
+=======
+guid: aee9e2ce486d84a448a40dae497beaa9
+>>>>>>> parent of 5818f5e (ACTUALIZACIÓN_INTERFAZ):Assets/GAME/Materials/Arena/jim-gade-eYWNaMffWHI-unsplash.jpg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
